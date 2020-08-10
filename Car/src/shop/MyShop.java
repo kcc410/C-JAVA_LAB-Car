@@ -13,7 +13,7 @@ public class MyShop {
 	String newUser;
 	
 	Product[] avanteProducts = new Product[4];
-	Product[] morningProducts = new Product[4];
+	Product[] morningProducts = new Product[6];
 	Product[] sonataProducts = new Product[4];
 	Product[] grandeurProducts = new Product[4];
 	
@@ -164,7 +164,7 @@ public class MyShop {
 		avante = new Avante("+타이어 인치업", 50, 3);
 		avanteProducts[2] = avante;
 		avante = new Avante("+풀옵션", 300, 3);
-		avanteProducts[3] = avante;
+		avanteProducts[3] = avante;		
 		
 		Morning morning = new Morning("기본옵션", 1000, 2);
 		morning.setCategoryName("모닝");
@@ -173,8 +173,12 @@ public class MyShop {
 		morningProducts[1] = morning;
 		morning = new Morning("+스마트 키", 10, 2);
 		morningProducts[2] = morning;
-		morning = new Morning("+풀옵션", 200, 2);
+		morning = new Morning("+열선시트", 80, 2);
 		morningProducts[3] = morning;
+		morning = new Morning("+통풍시트", 100, 2);
+		morningProducts[4] = morning;
+		morning = new Morning("+풀옵션", 200, 2);
+		morningProducts[5] = morning;
 		
 		Sonata sonata = new Sonata("기본옵션", 1800, 5);
 		sonata.setCategoryName("쏘나타"); 
@@ -283,8 +287,9 @@ public class MyShop {
 		
 		// products[0]의 의미는 0, 1, 2중 아무거나 와도 출력값이 같아서 0으로 설정함
 		System.out.println("#  " + products[0].getCategoryName() + " 카테고리에 오신 것을 환영합니다. 원하시는 상품 번호를 입력해주세요.");
-		
-		for (int i = 0; i < 4; i++) {
+		//수정 전 - i < 4; product[] avanteProducts 등등 모든 배열의 수가 같아야 출력이 가능함
+		//수정 후 - products.length; 카테고리 안의 배열의 길이(옵션)를 각각 다르게 하여야한다면 products.length를 이용하여 출력
+		for (int i = 0; i < products.length; i++) {
 			System.out.printf("#  옵션번호" + (i + 1) + " : %s, 가격 : %d만, 한정수량: %d\n", 
 					products[i].getProductName(), products[i].getPrice(), products[i].getRemainingStock());
 		}
