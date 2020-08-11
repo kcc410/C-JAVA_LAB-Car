@@ -8,7 +8,7 @@ public class StartShopping {
 		
 		myshop.setTitle("현대자동차");
 		myshop.genProduct();
-		myshop.setExistingUsers("조재희", "권혁천", myshop.existingUsers);
+		myshop.setExistingUsers("김민아", "이철민", myshop.existingUsers);
 		myshop.initAlarm();
 	}
 

@@ -86,7 +86,7 @@ public class MyShop {
 	public void choiceAccount() {
 		
 		System.out.println("====================================================");
-		System.out.println("# 데이터 조회 결과, 두 개의 계정이 존재합니다. 원하시는 계정을 선택해주세요.");
+		System.out.println("# 방문하신 고객님의 기록입니다, 이름을 선택해주세요");
 		System.out.println("#  회원[1] : " + existingUsers[0]);
 		System.out.println("#  회원[2] : " + existingUsers[1]);
 		System.out.printf("#  선택 -> ");
@@ -113,7 +113,7 @@ public class MyShop {
 	public void registerAccount() {
 		
 		System.out.println("====================================================");
-		System.out.println("#  회원가입을 진행합니다.");
+		System.out.println("# 새로운 고객입니다.");
 		System.out.printf("#  성함을 입력해주세요 : ");
 		
 		newUser = scan.next();
@@ -386,7 +386,7 @@ public class MyShop {
 		} else {
 			
 			System.out.println("=======================================");
-			System.out.printf("#  %만원을 더 지불하셔야 합니다.\n", total - cash);
+			System.out.printf("#  %d만원을 더 지불하셔야 합니다.\n", total - cash);
 			
 			differencePayment(cash);
 		}
